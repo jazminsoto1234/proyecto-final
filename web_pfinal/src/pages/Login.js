@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
-function Login({ history }) {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
-  
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ function Login({ history }) {
       const { token } = response.data;
       localStorage.setItem('token', token);
       setLoggedIn(true);
-      history.push('/home');
+      navigate('/home');
 
       console.log('Respuesta del servidor:', response.data);
       

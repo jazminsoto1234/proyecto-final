@@ -6,10 +6,6 @@ import { Redirect, Route } from 'react-router-dom';
 const AppRouter = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  // Lógica para verificar si el usuario está autenticado
-  // por ejemplo, comprobando la presencia de un token en localStorage
-  // ...
-
   return (
     <>
       {loggedIn ? (
