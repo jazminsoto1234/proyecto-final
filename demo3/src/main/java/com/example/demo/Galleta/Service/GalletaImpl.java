@@ -3,6 +3,8 @@ package com.example.demo.Galleta.Service;
 import com.example.demo.Galleta.Domain.Galleta;
 import com.example.demo.Galleta.Domain.GalletaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,9 +24,10 @@ public class GalletaImpl implements GalletaService{
     }
 
     @Override
-    public List<Galleta> getAllGalletas() {
-        return galletaRepository.findAll();
+    public Page<Galleta> getAllGalletas(Pageable pageable) {
+        return galletaRepository.findAll(pageable);
     }
+
 
     @Override
     public Galleta insertGalleta(Galleta galleta) {
@@ -51,4 +54,5 @@ public class GalletaImpl implements GalletaService{
     public Optional<Galleta> buscarPorId(Long id) {
         return galletaRepository.findById(id);
     }
+
 }

@@ -2,6 +2,8 @@ package com.example.demo.Galleta.Service;
 
 
 import com.example.demo.Galleta.Domain.Galleta;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +13,7 @@ import java.util.Set;
 public interface GalletaService {
 
     public abstract void deleteGalleta(Long id);
-    public abstract List<Galleta> getAllGalletas();
+    public abstract Page<Galleta> getAllGalletas(Pageable pageable);
 
     public abstract Galleta insertGalleta(Galleta galleta);
 

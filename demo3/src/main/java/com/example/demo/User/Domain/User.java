@@ -41,12 +41,14 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, Role role) {
+    public User(String firstName, String lastName, String email, String password, Role role, Direccion direccion) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.role = role;
+        this.direccion = direccion;
+
     }
 
     @Override
@@ -119,4 +121,29 @@ public class User implements UserDetails {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public String getHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(String habilitado) {
+        this.habilitado = habilitado;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
 }
+

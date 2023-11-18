@@ -3,6 +3,8 @@ package com.example.demo.Galleta.Application;
 import com.example.demo.Galleta.Domain.Galleta;
 import com.example.demo.Galleta.Service.GalletaImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +18,9 @@ public class GalletaController {
     private GalletaImpl galletaService;
 
     @GetMapping
-    public ResponseEntity<List<Galleta>> getGalletas() {
-        List<Galleta> listaGalletas = galletaService.getAllGalletas();
-        return ResponseEntity.status(200).body(listaGalletas);
+    public ResponseEntity<Page<Galleta>> getGalletas(Pageable pageable) {
+        Page<Galleta> pageGalletas = galletaService.getAllGalletas(pageable);
+        return ResponseEntity.status(200).body(pageGalletas);
     }
 
     @GetMapping("/{id}")
@@ -30,6 +32,12 @@ public class GalletaController {
             return null;
         }
     }
+
+    /*
+    * GET /galletas?page=0&size=10&sort=id,asc
+     *
+     *
+    * */
 
     @PostMapping
     public ResponseEntity<String> createGalleta(@RequestBody Galleta galleta){
