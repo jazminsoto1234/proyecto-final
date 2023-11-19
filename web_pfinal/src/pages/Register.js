@@ -7,6 +7,10 @@ function Register() {
  const [lastname, setLastname] = useState('');
  const [email, setEmail] = useState('');
  const [password, setPassword] = useState('');
+ const [ciudad, setCiudad] = useState('');
+ const [provincia, setProvincia] = useState('');
+ const [calle, setCalle] = useState('');
+ const [referencia, setReferencia] = useState('');
  const navigate = useNavigate();
 
  const handleSubmit = async (e) => {
@@ -17,7 +21,13 @@ function Register() {
      lastname: lastname,
      email: email,
      password: password,
-     admin: false
+     admin: false,
+     direccion: {
+      ciudad: ciudad,
+      provincia: provincia,
+      calle: calle,
+      referencia: referencia
+    }
    });
    console.log('Respuesta del servidor:', response.data);
    navigate('/');
@@ -66,6 +76,42 @@ function Register() {
          required
        />
      </div>
+     <div>
+         <label>Ciudad:</label>
+         <input
+           type="text"
+           value={ciudad}
+           onChange={(e) => setCiudad(e.target.value)}
+           required
+         />
+      </div>
+      <div>
+         <label>Provincia:</label>
+         <input
+           type="text"
+           value={provincia}
+           onChange={(e) => setProvincia(e.target.value)}
+           required
+         />
+      </div>
+      <div>
+         <label>Calle:</label>
+         <input
+           type="text"
+           value={calle}
+           onChange={(e) => setCalle(e.target.value)}
+           required
+         />
+      </div>
+      <div>
+         <label>Referencia:</label>
+         <input
+           type="text"
+           value={referencia}
+           onChange={(e) => setReferencia(e.target.value)}
+           required
+         />
+      </div>
      <button type="submit">Registrarse</button>
    </form>
  </div>
