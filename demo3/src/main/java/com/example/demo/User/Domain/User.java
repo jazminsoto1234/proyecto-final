@@ -36,6 +36,7 @@ public class User implements UserDetails {
     private List<Pedido> pedidos;
 
     @ManyToOne
+    @JoinColumn(name = "direccion_id")
     private Direccion direccion;
 
     public User() {

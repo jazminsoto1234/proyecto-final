@@ -1,6 +1,7 @@
 package com.example.demo.Direccion.Domain;
 
 import com.example.demo.User.Domain.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -22,6 +23,7 @@ public class Direccion {
     private String referencia;
 
     @OneToMany
+    //@JsonIgnore
     private List<User> users;
 
     public Direccion() {}

@@ -1,5 +1,6 @@
 package com.example.demo.User.Service;
 
+import com.example.demo.Direccion.Service.DireccionService;
 import com.example.demo.User.Domain.Role;
 import com.example.demo.User.Domain.User;
 import com.example.demo.User.Dto.JwtAuthenticationResponse;
@@ -23,6 +24,9 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     @Autowired
+    private DireccionService direccionService;
+
+    @Autowired
     public AuthenticationService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtService jwtService, AuthenticationManager authenticationManager) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
@@ -37,6 +41,8 @@ public class AuthenticationService {
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole(Role.USER);
+        direccionService.insertarDireccion(request.getDireccion()); //Busco que tmb en el login aparezca la direccion
+        user.setDireccion(request.getDireccion());
 
         if (request.getAdmin()) {
             user.setRole(Role.ADMIN);

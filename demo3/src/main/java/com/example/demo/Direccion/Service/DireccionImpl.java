@@ -33,6 +33,7 @@ public class DireccionImpl implements DireccionService {
             existDirecion.setCiudad(direccion.getCiudad());
             existDirecion.setProvincia(direccion.getProvincia());
             existDirecion.setReferencia(direccion.getReferencia());
+            existDirecion.setUsers(direccion.getUsers());
             direccionRepository.save(existDirecion);
             return existDirecion;
         }else{
