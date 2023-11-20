@@ -3,8 +3,7 @@ import Button from "../components/elements/Button";
 import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartStore";
 import useTabSwitch from "../hooks/useTabSwitch";
-import { ReactComponent as ArrowRightSvg } from "../../assets/icons/arrow-right-long-svgrepo-com.svg";
-import { AddressForm } from "../components/AddressForm";
+import { AddressForm } from "../components/addressForm";
 import { ProductsSummary } from "../components/ProductsSummary";
 import { StripeWrapper } from "../components/PaymentForm";
 
@@ -27,7 +26,7 @@ const Cart = () => {
             <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>
                 <ProductsSummary />
                 <div className="flex justify-end p-2">
-                    <Button variant="dark" className="flex items-center" onClick={()=>handleTabSwitch('Delivery')}><span className="mr-1">Next</span><ArrowRightSvg /></Button>
+                    <Button variant="dark" className="flex items-center" onClick={()=>handleTabSwitch('Delivery')}><span className="mr-1">Next</span></Button>
                 </div>
             </div>
             <div className={`tabs ${currentTab !== 'Delivery' ? 'hidden' : ''}`}>
