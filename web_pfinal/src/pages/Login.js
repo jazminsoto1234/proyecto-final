@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import './Login.css';
 
 
 function Login() {
@@ -29,10 +29,10 @@ function Login() {
     }
   };
 
-  return (
-    <div>
+  return  (
+    <div className="login-container">
       {!loggedIn ? (
-        <>
+        <div className="login-form">
           <h2>Iniciar sesión</h2>
           <form onSubmit={handleSubmit}>
             <div>
@@ -53,10 +53,10 @@ function Login() {
                 required
               />
             </div>
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit" className="submit-button">Iniciar sesión</button>
           </form>
-          <button onClick={() => navigate('/register')}>Registrarse</button>
-        </>
+          <button onClick={() => navigate('/register')} className="register-button">Registrarse</button>
+        </div>
       ) : null}
     </div>
   );

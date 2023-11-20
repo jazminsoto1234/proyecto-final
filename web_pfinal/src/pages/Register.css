@@ -1,0 +1,39 @@
+/* Estilos del contenedor y formulario de registro */
+.register-container {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    height: 100vh; /* Altura del 100% del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-form {
+    text-align: center; /* Centrar elementos del formulario */
+    padding: 20px;
+  }
+  
+  .register-form h2 {
+    margin-bottom: 20px; /* Espacio inferior para el título */
+  }
+  
+  .register-form input,
+  .register-form button {
+    margin-bottom: 10px; /* Espaciado inferior entre elementos */
+  }
+  
+  /* Estilos para el botón de registro */
+  .register-button {
+    color: white; /* Texto blanco */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid white; /* Borde blanco */
+    padding: 8px 16px; /* Espaciado interno */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: white; /* Fondo blanco al pasar el cursor */
+    color: black; /* Texto negro al pasar el cursor */
+  }
+  

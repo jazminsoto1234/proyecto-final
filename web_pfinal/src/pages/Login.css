@@ -1,0 +1,50 @@
+.login-container {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form input,
+  .login-form button {
+    margin-bottom: 10px;
+  }
+  
+  .submit-button {
+    color: white; /* Texto blanco */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid white; /* Borde blanco */
+    padding: 8px 16px; /* Espaciado interno */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: white; /* Fondo blanco al pasar el cursor */
+    color: black; /* Texto negro al pasar el cursor */
+  }
+  
+  .register-button {
+    color: white; /* Texto blanco */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid white; /* Borde blanco */
+    padding: 8px 16px; /* Espaciado interno */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: white; /* Fondo blanco al pasar el cursor */
+    color: black; /* Texto negro al pasar el cursor */
+  }
