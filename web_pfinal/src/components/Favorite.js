@@ -1,11 +1,10 @@
-import meter1 from "../assets/img/meter1.jpg";
-import meter2 from "../assets/img/meter2.jpg";
-import meter3 from "../assets/img/meter3.jpg";
-import meter4 from "../assets/img/meter4.jpg";
-import meter5 from "../assets/img/meter5.jpg";
+import meter1 from "../assets/images/meter1.jpg";
+import meter2 from "../assets/images/meter2.jpg";
+import meter3 from "../assets/images/meter3.jpg";
+import meter4 from "../assets/images/meter4.jpg";
+import meter5 from "../assets/images/meter5.jpg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 export const Favorite = () => {
   const responsive = {
     superLargeDesktop: {

@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Header } from "../components/Header";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -7,13 +6,14 @@ import Cart from "../pages/Cart";
 import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartStore";
 import { Footer } from "../components/Footer";
+import {NavBar} from "../components/NavBar";
 
 const Navigation = () => {
     const productsInCart = useSelector(cartProducts);
 
     return (
         <BrowserRouter>
-            <Header cartCount={productsInCart ? productsInCart.length : 0}/>
+            <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />

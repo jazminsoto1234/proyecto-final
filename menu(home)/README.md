@@ -1,1 +1,0 @@
-Instalar react y bootstrap

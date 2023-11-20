@@ -1,37 +1,44 @@
+import { Container, Row, Col } from "react-bootstrap";
+import navIcon2 from "../assets/images/nav-icon2.svg";
+import navIcon3 from "../assets/images/nav-icon3.svg";
 export const Footer = () => {
-    return (
-        <footer class="bg-gray-800">
-            <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
-                    <ul class="text-gray-300">
-                        <li class="mb-4">
-                            <a href="#" className=" hover:underline">About</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Menu</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Legal</h2>
-                    <ul class="text-gray-300">
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Licensing</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                        </li>
-                    </ul>
-                </div>
+  return (
+    <footer className="footer">
+      <Container>
+        <div className="top">
+          <div className="left-content">
+            <h1>El Mundo de las Galletas</h1>
+            <p>Escoge tu galleta favorita</p>
+          </div>
+          <div className="right-content">
+            <div className="social-icon">
+              <a href="#"><img src={navIcon2} alt="Icon" /></a>
+              <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <div class="py-6 px-4 bg-gray-700 md:flex md:items-center md:justify-between">
-                <span class="text-sm text-gray-300 sm:text-center">© 2022 Food Delivery. All Rights Reserved.
-                </span>
-            </div>
-        </footer>
-    )
+          </div>
+          </div>
+        <div className="bottom">
+          <div>
+            <h4>Atención al Cliente</h4>
+            <a href="#">961930841</a>
+            <a href="#">926312778</a>
+            <a href="#">948471077</a>
+            <a href="#">950129419</a>
+          </div>
+          <div>
+            <h4>Sobre Nosotros</h4>
+            <a href="#">Zonas de Reparto</a>
+            <a href="#">Ventas Corporativas</a>
+            <a href="#">Comprobantes electrónicos</a>
+          </div>
+          <div>
+            <h4>Políticas & Términos</h4>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Políticas de Privacidad</a>
+            <a href="#">Políticas de Devoluciones</a>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  )
 }
